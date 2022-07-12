@@ -87,7 +87,7 @@ section {
     cursor: pointer;
 }
 .navbar__menu .menu__link.active-nav-item{
-    border-bottom: 5px solid #00bcd4;
+    border-left: 5px solid #00bcd4;
     background: #333!important;
     color: #fff;
 }
