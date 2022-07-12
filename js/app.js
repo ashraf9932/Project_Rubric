@@ -32,9 +32,11 @@ let navbarList = document.getElementById('navbar__list');
  * 
 */
 function removeActive(){
+    // removing the active class from all sections
     sections.forEach(function(e){
         e.classList.remove('active-section');
     })
+    // removing the active class from all nav items
     listItems.forEach(function(e){
         e.classList.remove('active-nav-item');
     })
@@ -60,10 +62,22 @@ function buildNav(){
     }
 }
 buildNav()
+// array with nav items after creation
 let listItems = document.querySelectorAll('ul li a');
-
 /**
  * End Main Functions
  * Begin Events
  * 
 */
+onscroll = function(){
+    sections.forEach(function(section){
+        // catch where the view port reachs the section
+        if(window.scrollY >= section.offsetTop - 250){
+            // removing all active class [section and nav items] using the helper function
+            removeActive();
+            // adding active class
+            section.classList.add('active-section')
+            document.querySelector(`ul li a[href='#${section.id}']`).classList.add('active-nav-item')
+        }
+    })
+}
