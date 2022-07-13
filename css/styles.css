@@ -20,6 +20,7 @@ body {
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+    height: 10000px;
 }
 
 
@@ -85,6 +86,7 @@ section {
     text-decoration: none;
     color: #000;
     cursor: pointer;
+    border-left: 5px solid transparent;
 }
 .navbar__menu .menu__link.active-nav-item{
     border-left: 5px solid #00bcd4;

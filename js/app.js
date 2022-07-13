@@ -22,8 +22,8 @@
  * Define Global Variables
  * 
 */
-let sections = document.querySelectorAll('main section');
-let navbarList = document.getElementById('navbar__list');
+const sections = document.querySelectorAll('main section');
+const navbarList = document.getElementById('navbar__list');
 
 
 /**
@@ -63,21 +63,23 @@ function buildNav(){
 }
 buildNav()
 // array with nav items after creation
-let listItems = document.querySelectorAll('ul li a');
+const listItems = document.querySelectorAll('ul li a');
 /**
  * End Main Functions
  * Begin Events
  * 
 */
 onscroll = function(){
-    sections.forEach(function(section){
-        // catch where the view port reachs the section
-        if(window.scrollY >= section.offsetTop - 250){
+    for(let i = 0; i<sections.length;i++){
+         // catch where the view port reachs the section
+        if(window.scrollY >= sections[i].offsetTop - (sections[i].offsetHeight * 0.35)){
             // removing all active class [section and nav items] using the helper function
             removeActive();
             // adding active class
-            section.classList.add('active-section')
-            document.querySelector(`ul li a[href='#${section.id}']`).classList.add('active-nav-item')
+            sections[i].classList.add('active-section')
+            document.querySelector(`ul li a[href='#${sections[i].id}']`).classList.add('active-nav-item')
         }
-    })
+        // removing Active class while scrolling aftere all sections
+        window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
+    }
 }
