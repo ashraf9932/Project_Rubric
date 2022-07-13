@@ -20,7 +20,6 @@ body {
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
-    height: 10000px;
 }
 
 
@@ -54,7 +53,31 @@ p {
 main {
     margin: 10vh 1em 10vh;
 }
-
+.scroll-to-top{
+    background-color: #cc1;
+    color: #000;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 5;
+    bottom: 60px;
+    right: 60px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    text-transform: capitalize;
+    user-select: none;
+}
+.scroll-to-top:hover{
+    background-color: rgb(136, 136, 12);
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    transform: scale(1.2) rotate(360deg);
+}
 .main-hero {
     min-height: 40vh;
     padding-top: 3em;

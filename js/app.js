@@ -24,13 +24,14 @@
 */
 const sections = document.querySelectorAll('main section');
 const navbarList = document.getElementById('navbar__list');
-
+const ScrollTop = document.querySelector('.scroll-to-top');
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
+// remove active function
 function removeActive(){
     // removing the active class from all sections
     sections.forEach(function(e){
@@ -82,4 +83,17 @@ onscroll = function(){
         // removing Active class while scrolling aftere all sections
         window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
     }
+    // scroll to top displya
+    if(window.scrollY >= 1000){
+        ScrollTop.style.display = "flex"
+    }else if(window.scrollY < 1000){
+        ScrollTop.style.display = "none"
+    }
+}
+// scroll to top function
+ScrollTop.onclick = function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
