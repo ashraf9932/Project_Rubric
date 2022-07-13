@@ -62,7 +62,7 @@ function buildNav(){
     }
 }
 buildNav()
-// array with nav items after creation
+//Assign nav items array after creation
 const listItems = document.querySelectorAll('ul li a');
 /**
  * End Main Functions
