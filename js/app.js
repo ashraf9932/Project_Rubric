@@ -84,9 +84,9 @@ onscroll = function(){
         window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
     }
     // scroll to top displya
-    if(window.scrollY >= 1000){
+    if(window.scrollY >= 700){
         ScrollTop.style.display = "flex"
-    }else if(window.scrollY < 1000){
+    }else if(window.scrollY < 700){
         ScrollTop.style.display = "none"
     }
 }
