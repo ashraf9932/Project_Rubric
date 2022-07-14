@@ -122,6 +122,24 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
+@media (max-width:500px) {
+    ul {
+        font-size: smaller;
+        text-align: left;
+    }
+}
+@media (max-width:350px) {
+    ul {
+        font-size: x-small;
+        text-align: left;
+    }
+}
+@media (max-width:250px) {
+    ul {
+        font-size: xx-small;
+        text-align: left;
+    }
+}
 
 /* Header Styles */
 .page__header {

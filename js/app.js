@@ -79,7 +79,7 @@ onscroll = function(){
             listItems[i].classList.add('active-nav-item')
         }
         // removing Active class while scrolling aftere all sections
-        window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
+        window.scrollY > sections[sections.length - 1].offsetTop+sections[sections.length - 1].offsetHeight ? removeActive():false;
     }
     // Appearance of scroll to top
     window.scrollY >= document.body.offsetHeight * 0.25 ? ScrollTop.style.right = "4%" : ScrollTop.style.right = "-30%";
