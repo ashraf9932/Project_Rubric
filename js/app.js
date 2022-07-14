@@ -49,22 +49,20 @@ function removeActive(){
  */
 function buildNav(){
     for(let i = 0;i < sections.length; i++){
-        // adding the li element and the anchor link inside of it.
+        // adding the li element and the span inside of it.
         const navItem = document.createElement('li');
-        const navLink = document.createElement("a");
+        const navLink = document.createElement("span");
         navbarList.appendChild(navItem);
         navItem.appendChild(navLink);
         // setting the text content from the dataset of each section
         navLink.textContent = sections[i].dataset.nav;
         // adding the class name for the Style
         navLink.className = "menu__link"
-        // adding the ID of each section in the href of the anchor link
-        navLink.href = '#'+sections[i].id;
     }
 }
 buildNav()
 //Assign nav items array after creation
-const listItems = document.querySelectorAll('ul li a');
+const listItems = document.querySelectorAll('ul li span');
 /**
  * End Main Functions
  * Begin Events
@@ -78,7 +76,7 @@ onscroll = function(){
             removeActive();
             // adding active class
             sections[i].classList.add('active-section')
-            document.querySelector(`ul li a[href='#${sections[i].id}']`).classList.add('active-nav-item')
+            listItems[i].classList.add('active-nav-item')
         }
         // removing Active class while scrolling aftere all sections
         window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
@@ -96,4 +94,14 @@ ScrollTop.onclick = function(){
         top:0,
         behavior:"smooth"
     });
+}
+// scrolling to section onclick the nav item [depends on the same index].
+for(let i = 0;i < listItems.length;i++){
+    listItems[i].onclick = function(){
+        window.scrollTo({
+            top: sections[i].offsetTop,
+            left:0,
+            behavior: "smooth"
+        })
+    }
 }
