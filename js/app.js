@@ -57,7 +57,7 @@ function buildNav(){
         // setting the text content from the dataset of each section
         navLink.textContent = sections[i].dataset.nav;
         // adding the class name for the Style
-        navLink.className = "menu__link"
+        navLink.className = "menu__link";
     }
 }
 buildNav()
@@ -81,12 +81,8 @@ onscroll = function(){
         // removing Active class while scrolling aftere all sections
         window.scrollY > sections[3].offsetTop+sections[3].offsetHeight ? removeActive():false;
     }
-    // scroll to top displya
-    if(window.scrollY >= 700){
-        ScrollTop.style.right = "4%"
-    }else if(window.scrollY < 700){
-        ScrollTop.style.right = "-10%"
-    }
+    // Appearance of scroll to top
+    window.scrollY >= document.body.offsetHeight * 0.25 ? ScrollTop.style.right = "4%" : ScrollTop.style.right = "-30%";
 }
 // scroll to top function
 ScrollTop.onclick = function(){
@@ -103,5 +99,5 @@ for(let i = 0;i < listItems.length;i++){
             left:0,
             behavior: "smooth"
         })
-    }
-}
+    };
+};
