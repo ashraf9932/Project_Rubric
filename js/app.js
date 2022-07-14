@@ -83,9 +83,9 @@ onscroll = function(){
     }
     // scroll to top displya
     if(window.scrollY >= 700){
-        ScrollTop.style.right = "60px"
+        ScrollTop.style.right = "4%"
     }else if(window.scrollY < 700){
-        ScrollTop.style.right = "-90px"
+        ScrollTop.style.right = "-10%"
     }
 }
 // scroll to top function

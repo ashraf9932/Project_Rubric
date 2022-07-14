@@ -59,8 +59,8 @@ main {
     height: 60px;
     position: fixed;
     z-index: 5;
-    bottom: 60px;
-    right: -90px;
+    bottom: 5%;
+    right: -10%;
     text-align: center;
     display: flex;
     align-items: center;
