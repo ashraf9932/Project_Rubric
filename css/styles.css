@@ -60,9 +60,9 @@ main {
     position: fixed;
     z-index: 5;
     bottom: 60px;
-    right: 60px;
+    right: -90px;
     text-align: center;
-    display: none;
+    display: flex;
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
@@ -71,11 +71,11 @@ main {
     text-transform: capitalize;
     -webkit-user-select: none;
     user-select: none;
+    transition: all 0.3s;
 }
 .scroll-to-top:hover{
     background-color: rgb(136, 136, 12);
     color: rgb(255, 255, 255);
-    transition: all 0.3s;
     transform: scale(1.2) rotate(360deg);
 }
 .main-hero {
