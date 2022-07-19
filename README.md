@@ -1,6 +1,6 @@
 # Project Title
 
-## Project Rubric
+## 
 
 # Projecr Description
 
